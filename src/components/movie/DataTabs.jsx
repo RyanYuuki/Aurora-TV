@@ -36,8 +36,8 @@ export default function TabsDemo({ data }) {
       {MetaData.map((meta, index) => (
         <TabsContent key={meta.tab} value={meta.tab}>
           <div className="my-5">
-            <h2 className="text-2xl font-semibold">{meta.title}</h2>
-            <p className="text-base mt-1">{meta.description}</p>
+            <h2 className="text-2xl font-semibold font-mono">{meta.title}</h2>
+            <p className="text-base mt-1 font-mono">{meta.description}</p>
           </div>
           <div className="grid grid-cols-3 gap-y-8 gap-x-5 ">
             {data[index]?.map((movie) => {

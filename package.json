@@ -1,6 +1,6 @@
 {
-  "name": "sora-tv",
-  "version": "0.1.0",
+  "name": "aurora-tv",
+  "version": "0.0.69",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -39,9 +39,9 @@ const MetaData = ({ data }) => {
           </Badge>
         </div>
 
-        <p className="text-base bg-zinc-700/50 italic p-2">
+        <Badge variant={'outline'} className="text-base font-normal italic p-2">
           {data.overview + " " + data.tagline}
-        </p>
+        </Badge>
         <div className="grid grid-cols-3 grid-rows-auto mt-2 font-regular text-primary/50">
           <div className="flex flex-col gap-3">
             <div>
