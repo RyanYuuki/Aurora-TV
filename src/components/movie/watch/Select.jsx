@@ -12,7 +12,7 @@ export function ServerSelect({ onChange }) {
   return (
     <Select onValueChange={onChange}>
       <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Select a Server" />
+        <SelectValue placeholder="AutoEmbed" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>

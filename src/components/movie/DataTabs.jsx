@@ -39,7 +39,7 @@ export default function TabsDemo({ data }) {
             <h2 className="text-2xl font-semibold font-mono">{meta.title}</h2>
             <p className="text-base mt-1 font-mono">{meta.description}</p>
           </div>
-          <div className="grid grid-cols-3 gap-y-8 gap-x-5 ">
+          <div className="grid grid-cols-3 max-md:grid-cols-1 max-md:gap-y-2 gap-y-8 gap-x-5 ">
             {data[index]?.map((movie) => {
               const formattedDesc =
                 movie.overview.length > 200

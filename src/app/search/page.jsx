@@ -18,48 +18,48 @@ const Search = () => {
     loadData();
   }, [searchTerm]);
   return (
-    <div className="flex flex-col gap-3 px-20">
+    <div className="flex flex-col gap-3 px-20 max-md:px-2">
       <Input
         value={searchTerm}
         onChange={() => setSearchTerm(event.target.value)}
-        className="w-[500px] mt-10"
+        className="w-[500px] mt-10 max-md:w-[60%] max-md:mt-5"
         placeholder="Search Movie..."
       />
-      <div className="grid grid-cols-6 grid-rows-auto gap-5 place-items-center">
+      <div className="grid grid-cols-6 max-md:grid-cols-2 grid-rows-auto gap-5 place-items-center">
         {searchData &&
           searchData.map((data) => (
             <Link
               href={`/details/${data.id}`}
-              className="h-[370px] gap-1 p-3 text-center border border-border"
+              className="flex flex-col gap-1 p-3 text-center border border-border"
               key={data.id}
             >
               <Image
                 width={200}
                 height={270}
-                src={ImageFetcher(data.poster_path)}
+                src={ImageFetcher(data?.poster_path)}
                 className="rounded-lg object-cover"
                 alt=""
               />
-              <div className="flex flex-row justify-between mt-3">
-                <div className="flex flex-row">
+              <div className="flex flex-row justify-between items-center my-1">
+                <div className="flex flex-row items-center">
                   <Badge className="uppercase" variant="outline">
-                    {data.original_language}
+                    {data?.original_language}
                   </Badge>
                   <Badge className="uppercase" variant="outline">
-                    {data.isAdult ? "18+" : "PG-13"}
+                    {data?.isAdult ? "18+" : "PG-13"}
                   </Badge>
                 </div>
                 <div className="flex flex-row">
                   <Separator orientation="vertical" />
                   <Badge className="uppercase" variant="default">
-                    {data.vote_average.toString().slice(0, -2)}
+                    {data?.vote_average?.toString().slice(0, -2) || '0.0'}
                   </Badge>
                 </div>
               </div>
               <h2 className="text-[15px]" >
-                {data.title.length > 30
-                  ? data.title.substring(0, 30) + "..."
-                  : data.title}
+                {data?.title?.length > 30
+                  ? data?.title.substring(0, 30) + "..."
+                  : data?.title}
               </h2>
             </Link>
           ))}

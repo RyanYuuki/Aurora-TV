@@ -23,7 +23,7 @@ export default function Home() {
   if(!CarouselData || !tabsData) return <h1>Loading...</h1>
 
   return (
-    <main className="flex flex-col gap-5 min-h-screen px-20">
+    <main className="flex flex-col gap-5 min-h-screen px-20 max-md:px-3">
       <BigCarousel data={CarouselData} />
       <DataTabs data={tabsData} />
     </main>

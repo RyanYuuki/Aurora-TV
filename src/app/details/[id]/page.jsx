@@ -23,7 +23,7 @@ const Details = () => {
   if(!data) return <h1>Loading..</h1>
 
   return (
-    <div className="flex flex-col items-center px-10 gap-2 min-h-screen" >
+    <div className="flex flex-col items-center px-10 max-md:px-1 max-md:gap-[2px] gap-2 min-h-screen" >
       <Poster src={posterSrc} />
       <MetaData data={data} />
     </div>
