@@ -10,7 +10,6 @@ export default function Home() {
   useEffect(() => {
     const loadData = async () => {
       const data = await fetchMovieTopRated();
-      console.log(data);
       const TrendingData = await fetchMovieTrending();
       const PopularData = await fetchMoviePopular();
       const UpcomingData = await fetchMovieUpcoming();
@@ -19,8 +18,6 @@ export default function Home() {
     }
     loadData();
   },[])
-
-  if(!CarouselData || !tabsData) return <h1>Loading...</h1>
 
   return (
     <main className="flex flex-col gap-5 min-h-screen px-20 max-md:px-3">
